@@ -1,0 +1,122 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Copy of Untitled0.ipynb",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/teacherRay/TestRepo/blob/master/ufo_data_pandas\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "4NN5-6S3xPWs",
+        "colab_type": "code",
+        "outputId": "e42e0529-70f9-46d7-e1fb-9a85c0ed5028",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 195
+        }
+      },
+      "source": [
+        "import pandas as pd\n",
+        "link = 'http://bit.ly/uforeports'\n",
+        "ufo = pd.read_csv(link)\n",
+        "ufo.columns\n",
+        "# reference using String\n",
+        "cols = ['City', 'State']\n",
+        "ufo = pd.read_csv(link, usecols=cols)\n",
+        "ufo.head()\n"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/html": [
+              "<div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>City</th>\n",
+              "      <th>State</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>Ithaca</td>\n",
+              "      <td>NY</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>Willingboro</td>\n",
+              "      <td>NJ</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>Holyoke</td>\n",
+              "      <td>CO</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>3</th>\n",
+              "      <td>Abilene</td>\n",
+              "      <td>KS</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>4</th>\n",
+              "      <td>New York Worlds Fair</td>\n",
+              "      <td>NY</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>"
+            ],
+            "text/plain": [
+              "                   City State\n",
+              "0                Ithaca    NY\n",
+              "1           Willingboro    NJ\n",
+              "2               Holyoke    CO\n",
+              "3               Abilene    KS\n",
+              "4  New York Worlds Fair    NY"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 9
+        }
+      ]
+    }
+  ]
+}
